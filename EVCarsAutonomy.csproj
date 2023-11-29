@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\towerofsilence.ttf" />
+    <None Remove="Fonts\towerofsilenceital.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Asets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\towerofsilence.ttf" />
+    <Resource Include="Fonts\towerofsilenceital.ttf" />
+  </ItemGroup>
+
+</Project>
