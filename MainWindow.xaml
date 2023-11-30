@@ -14,7 +14,7 @@
     <Grid x:Name="___Titlu_"  Background="#F9F6EE">
 
         <!--// mesaj fundal //-->
-        <TextBlock Text="Calculator Autonomie Masini Electrice"
+        <TextBlock Text="Electric Vehicle Range Calculator"
                    Foreground="#525965"
                    FontFamily="Cascadia Code"
                    FontSize="15"
@@ -37,6 +37,19 @@
                    FontSize="22"
                    VerticalAlignment="Top"
                    Margin="439,39,0,0" HorizontalAlignment="Left" Width="277" />
+        <!-- Imagine dedesubtul textului "TRY MY APP" -->
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="460,107,0,0">
+            <Image Source="Asets/masinuta.png" Width="234" Height="208" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.38"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </StackPanel>
 
         <Border Background="#D61734"
                 Height="15"
@@ -54,14 +67,14 @@
 
 
 
-        <!--// Menu Panel //-->
+        <!--// Panel //-->
 
         <StackPanel Background="#2E333A"
                     Width="230"
                     Orientation="Vertical"
                     HorizontalAlignment="Left">
 
-            <!--// Channel //-->
+            <!--// Nume Panel //-->
             <Grid>
                 <Grid Height="50"
                   VerticalAlignment="Top"
@@ -82,7 +95,101 @@
                            HorizontalAlignment="Center" />
                 </Grid>
             </Grid>
+
+            <!--Meniu Principal-->
+            <Menu Height="450"
+                  Background="Transparent"
+                  Margin="0,40,0,0">
+
+                <Menu.ItemsPanel>
+
+                    <ItemsPanelTemplate>
+
+                        <VirtualizingStackPanel Orientation="Vertical" />
+
+                    </ItemsPanelTemplate>
+
+                </Menu.ItemsPanel>
+
+                <!--// Main Menu - HOME //-->
+                <MenuItem Header="Home" Foreground="#FFFFFF" FontFamily="Cascadia Code" FontSize="15" Margin="0,13,0,0">
+                    <MenuItem.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <!-- Icona pentru "Acasa" -->
+                                <Image Source="Asets/home.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <!-- Textul pentru "Acasa" -->
+                                <TextBlock Text="H o m e" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </MenuItem.HeaderTemplate>
+                </MenuItem>
+
+                <!--// Main Menu - ANALIZA //-->
+                <MenuItem Header="Home" Foreground="#FFFFFF" FontFamily="Cascadia Code" FontSize="15" Margin="0,28,0,0">
+                    <MenuItem.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <!-- Icona pentru "analiza" -->
+                                <Image Source="Asets/calculator.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <!-- Textul pentru "analiza" -->
+                                <TextBlock Text="A n a l y s e" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </MenuItem.HeaderTemplate>
+                </MenuItem>
+
+                <!--// Main Menu - Find Model //-->
+                <MenuItem Header="Home" Foreground="#FFFFFF" FontFamily="Cascadia Code" FontSize="15" Margin="0,26,0,0">
+                    <MenuItem.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <!-- Icona pentru "Find Model" -->
+                                <Image Source="Asets/search.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <!-- Textul pentru "Find Model" -->
+                                <TextBlock Text="F i n d " VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </MenuItem.HeaderTemplate>
+                </MenuItem>
+
+                <!--// Main Menu - Exit //-->
+                <MenuItem Header="Home" Foreground="#FFFFFF" FontFamily="Cascadia Code" FontSize="15" Margin="0,23,0,0">
+                    <MenuItem.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <!-- Icona pentru "Exit" -->
+                                <Image Source="Asets/exit.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <!-- Textul pentru "Exit" -->
+                                <TextBlock Text="E x i t" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </MenuItem.HeaderTemplate>
+                </MenuItem>
+
+            </Menu>
+
+            <!--Dreapta sus / Minimize App-->
+
         </StackPanel>
+        <Button Content="Min"
+        Width="50"
+        Height="30"
+        HorizontalAlignment="Right"
+        VerticalAlignment="Top"
+        Margin="0,10,10,0"
+        Click="MinimizeButton_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Iconita pentru Minimize -->
+                        <Image Source="Asets/minimize.png" Width="20" Height="20" />
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
 
 
     </Grid>
