@@ -23,7 +23,34 @@ namespace EVCarsAutonomy
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Uri("Home.xaml", UriKind.Relative));
         }
+
+        private void ToggleMenu(object sender, RoutedEventArgs e)
+        {
+            // Implementați logica pentru afișarea/ascunderea meniului hamburger
+        }
+
+        private void NavigateToHome(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("Home.xaml", UriKind.Relative));
+        }
+
+        private void NavigateToFind(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("Find.xaml", UriKind.Relative));
+        }
+
+        private void NavigateToCalculate(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new Uri("Calculate.xaml", UriKind.Relative));
+        }
+
+        private void ExitApplication(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+   
 
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {

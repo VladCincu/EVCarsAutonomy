@@ -112,14 +112,14 @@
                 </Menu.ItemsPanel>
 
                 <!--// Main Menu - HOME //-->
-                <MenuItem Header="Home" Foreground="#FFFFFF" FontFamily="Cascadia Code" FontSize="15" Margin="0,13,0,0">
+                <MenuItem Header="Home" Foreground="#FFFFFF" FontFamily="Cascadia Code" FontSize="15" Margin="0,13,0,0" Background="{x:Null}">
                     <MenuItem.HeaderTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <!-- Icona pentru "Acasa" -->
-                                <Image Source="Asets/home.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <Image Source="C:\Users\cincu\OneDrive\Desktop\EVCarsAutonomy-master\Asets\home.png" Width="70" Height="40" Margin="0,0,5,0"/>
                                 <!-- Textul pentru "Acasa" -->
-                                <TextBlock Text="H o m e" VerticalAlignment="Center"/>
+                                <Button Content="H O M E" Click="NavigateToHome"  VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFFFFF" BorderBrush="{x:Null}"/>
                             </StackPanel>
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>
@@ -131,9 +131,9 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <!-- Icona pentru "analiza" -->
-                                <Image Source="Asets/calculator.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <Image Source="C:\Users\cincu\OneDrive\Desktop\EVCarsAutonomy-master\Asets\calculator.png" Width="70" Height="40" Margin="0,0,5,0"/>
                                 <!-- Textul pentru "analiza" -->
-                                <TextBlock Text="A n a l y s e" VerticalAlignment="Center"/>
+                                <Button Content="CALCULCATE" Click="NavigateToCalculate" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFFFFF" BorderBrush="{x:Null}"/>
                             </StackPanel>
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>
@@ -145,9 +145,9 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <!-- Icona pentru "Find Model" -->
-                                <Image Source="Asets/search.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <Image Source="C:\Users\cincu\OneDrive\Desktop\EVCarsAutonomy-master\Asets\search.png" Width="70" Height="40" Margin="0,0,5,0"/>
                                 <!-- Textul pentru "Find Model" -->
-                                <TextBlock Text="F i n d " VerticalAlignment="Center"/>
+                                <Button Content="FIND"  Click="NavigateToFind" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFFFFF" BorderBrush="{x:Null}"/>
                             </StackPanel>
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>
@@ -159,9 +159,9 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <!-- Icona pentru "Exit" -->
-                                <Image Source="Asets/exit.png" Width="70" Height="40" Margin="0,0,5,0"/>
+                                <Image Source="C:\Users\cincu\OneDrive\Desktop\EVCarsAutonomy-master\Asets\exit.png" Width="70" Height="40" Margin="0,0,5,0"/>
                                 <!-- Textul pentru "Exit" -->
-                                <TextBlock Text="E x i t" VerticalAlignment="Center"/>
+                                <Button Content="EXIT" Click="ExitApplication" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFFFFF" BorderBrush="{x:Null}"/>
                             </StackPanel>
                         </DataTemplate>
                     </MenuItem.HeaderTemplate>
@@ -188,7 +188,10 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-
+        <!-- Conținutul paginii -->
+        <Border Grid.Column="1">
+            <Frame x:Name="MainFrame"/>
+        </Border>
 
 
 
